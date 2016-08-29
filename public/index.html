@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+	
+		<title>Phaser Games</title>
+		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="stylesheets/style.css">
+
+		<script src="jquery/dist/jquery.min.js"></script>
+		<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+<!--		<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.4.8/phaser.js"></script>-->
+		<script src="javascripts/phaser.min.js"></script>
+		<script src="bootbox.js/bootbox.js"></script>
+		<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<!--		<script src="javascripts/scrolling.js"></script>-->
+	</head>
+	<body ng-controller="MainCtrl as vm">
+		<div id="canvas-wrap">
+			<div id="mygame"></div>
+			<div id="overlay">
+				<div style="color: white; font-size: 25px">Online: {{vm.users.length}}</div>
+				<div style="color: white; font-size: 25px">KillCount: 0</div>
+				
+			</div>
+			<div id="messageBox">
+				<div id="msgList">
+					<ul ng-repeat="user in vm.messages">
+						<li><b style="color: #32CD32">{{user.username}} : </b> {{user.message}}</li>
+
+					</ul>
+				</div>
+			</div>
+			<div id="chatBox">
+				<form id="chatForm">
+					<div id="messageRow" class="row">
+						<div id="messageInput" class="col-xs-9 col-sm-9 col-md-9">
+							<input ng-model="vm.myMessage" type="text" ng-model="vm.myMessage" class="form-control" placeholder="Enter your message here">
+						</div>
+						<div id="messageButton" class="col-xs-3 col-sm-3 col-md-3">
+							<button ng-click="vm.sendMessage(vm.myMessage)" type="submit" class="btn btn-info btn-block">Send</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+  
+			
+<!--
+	<div class="row">
+		<div id="chatBox" class="col-xs-10 col-sm-10 col-md-10">
+					<div class="panel panel-primary">
+						<div class="panel-heading text-center"><b>Chat Box</b></div>
+						<div id="chatBody" class="panel-body">
+							<table class="table table-hover table-condensed">
+								<tr ng-repeat="user in vm.messages">
+									<td>
+										<p><b style="color: green">{{user.username}} : </b> {{user.message}}</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="panel-footer">
+							<form>
+								<div class="row">
+									<div class="col-xs-10 col-sm-10 col-md-10">
+										<input type="text" ng-model="vm.myMessage" class="form-control" placeholder="Place your chat here">
+									</div>
+									<div class="col-xs-2 col-sm-2 col-md-2">
+										<button style="float:right" type="submit" ng-click="vm.sendMessage(vm.myMessage)" class="btn btn-success btn-block">Send</button>
+									</div>
+								</div>
+							</form>	
+						</div>
+							</div>
+		</div>
+			<div id="onlineBox" class="col-xs-2 col-sm-2 col-md-2">
+				<div class="panel panel-danger">
+					<div class="panel-heading text-center"><b>Online</b></div>
+					<div class="panel-body">
+						<table class="table table-hover table-condensed">
+							<thead>
+								<tr>
+									<th>User</th>
+									<th>Level</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="user in vm.users">
+									<td id="testcolor" style="color: green">{{user}}</td>
+									<td style="color: blue">0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="panel-footer">
+						<button style="padding-right: 30px" class="btn btn-danger btn-block">Invite</button>
+					</div>
+				</div>
+			</div>
+</div>		
+-->
+
+
+		
+		
+<!--		<script src="globalitem.js"></script>-->
+		<script src="healthbar.js"></script>
+		<script src="RemotePlayer.js"></script>
+		<script src="phaserapp.js"></script>
+		<script src="angular/angular.min.js"></script>
+		<script src="angular-socket-io/socket.min.js"></script>
+		<script src="app.js"></script>
+		<script src="SocketFactory.js"></script>
+	</body>
+</html>

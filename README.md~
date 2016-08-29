@@ -1,0 +1,28 @@
+## Chibi Fight!
+
+<p align="center">
+  <a href="">
+    <img alt="Logo" src="https://github.com/VietAnhh/RutgersInfo/blob/master/chibiFight.png" width="100%">
+  </a>
+</p>
+
+- Angular
+- Express
+- SocketIO
+
+# Install dependencies
+```
+npm install
+```
+
+# start server
+```
+node ./bin/www
+```
+
+
+# Applciation url: http://localhost:3000
+```
+http://localhost:3000
+
+```

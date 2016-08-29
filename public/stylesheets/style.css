@@ -1,0 +1,80 @@
+html, body {
+/*	height: 100%;*/
+  padding: 0px;
+  margin: 0px;
+	top: 0;
+	bottom: 0;
+	background-color: black;
+/*	display: block;*/
+}
+#canvas-wrap { 
+	position:relative 
+} /* Make this a positioned parent */
+#overlay  { 
+	position:absolute;
+	pointer-events: none;
+	top:20px; 
+	left:30px; 
+}
+#chatBox{
+	position: absolute;
+/*	top: 96%;*/
+	bottom: 1px;
+	width: 50%;
+}
+#messageBox{
+	position: absolute;
+	bottom: 35px;
+	width: 50%;	
+	pointer-events: none;
+	border
+}
+#messageButton{
+	padding: 0;
+	border-radius: 0;
+	
+}
+#messageInput{
+	padding: 0 0 0 20px;
+	border-radius: 0;
+}
+#msgList{
+	margin: 0 0 0 10px;
+	overflow:hidden;
+/*	overflow-y:scroll;	*/
+	height: 165px;
+	font-size: 14px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.3);
+	list-style-type: none;
+	padding-bottom: 38px;
+}
+
+.panel-body{
+	overflow-y: scroll;
+	min-height: 135px;
+	max-height: 135px;
+	height: 100%;
+	padding: 10px 30px;
+}
+
+ul{
+	margin: 0;
+	padding-left: 15px;
+	padding-top: 15px;
+	list-style-type: none;
+}
+li{
+	padding-left: 0;
+}
+
+
+.panel-footer{
+	background-color: #ccc;
+}
+
+#chatBox, #onlineBox{
+	padding: 0;
+}
+
+
