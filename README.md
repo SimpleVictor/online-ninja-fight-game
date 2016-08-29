@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="">
-    <img alt="Logo" src="https://github.com/VietAnhh/RutgersInfo/blob/master/chibiFight.png" width="100%">
+    <img alt="Logo" src="https://github.com/VietAnhh/ChibiFightGame/blob/master/chibiFight.png" width="100%">
   </a>
 </p>
 
