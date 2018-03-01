@@ -9,15 +9,15 @@
 <p><strong>Play this online game with your friends! Of course you would have to deploy it to some cloud. You can test that it works by opening up another browser and going to the same url</strong></p>
 
 ### Install dependencies
-```
-npm install
-```
+    -`npm install`
 
-### start server then navigate to localhost:3000
-```
-node ./bin/www
-```
+### Start The Server
+    - `npm run start`
+    - A browser will automatically pop up and navigate to `localhost:3000`
 
+### To Host Server on HTTPS (Will generate a unique https url for **others devices** to nevigate to)
+    - `npm run start:https`
+    - A browser will automatically pop up and navigate to the unique url
 
 <p align="center">
   <a href="">

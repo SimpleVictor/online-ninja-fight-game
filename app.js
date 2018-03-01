@@ -6,7 +6,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+const ngrok = require('ngrok');
+const opn = require('opn');
 
 
 var routes = require('./routes/index');
@@ -38,11 +39,15 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/', routes);
 app.use('/users', users);
 
-
-
-
-
-
+if(process.env.CONFIGHTTPS) {
+	ngrok.connect(3000, (err, url) => {
+		console.log(`HTTPS URL : ${url}`);
+		opn(url, {app: ['google chrome']});
+	});
+}else {
+	console.log('navigate to localhost:3000');
+  opn("http://localhost:3000", {app: ['google chrome']});
+}
 
 
 //Send this user to the new user to know whose already in the chat
