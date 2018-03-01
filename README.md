@@ -1,12 +1,6 @@
-## Online Ninja Game
+## Online Ninja Game - Play with your friends! No friends? You can still play!
 
 [Demo it here](https://online-ninja-game.herokuapp.com/)
-
-- AngularJS
-- Express
-- SocketIO
-
-<p><strong>Play this online game with your friends! Of course you would have to deploy it to some cloud. You can test that it works by opening up another browser and going to the same url</strong></p>
 
 ### Install dependencies
 1. `npm install`
@@ -19,6 +13,10 @@
 1. `npm run start:https`
 2. A browser will automatically pop up and navigate to the unique url
 3. Share the link with your friends!
+
+- AngularJS
+- Express
+- SocketIO
 
 <p align="center">
   <a href="">
